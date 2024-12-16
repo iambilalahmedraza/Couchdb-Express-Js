@@ -18,7 +18,7 @@ couch.db
   })
   .catch((err: any) => {
     if (err.statusCode === 412) {
-      console.log("Database already exists");
+      console.log(`Database ${dbName} in use ...`);
     } else {
       console.error("Error creating database:", err);
     }
